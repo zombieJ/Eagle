@@ -18,6 +18,8 @@
 
 'use strict';
 
+var app = {};
+
 /* App Module */
 var eagleApp = angular.module('eagleApp', ['ngRoute', 'ngCookies', 'damControllers']);
 

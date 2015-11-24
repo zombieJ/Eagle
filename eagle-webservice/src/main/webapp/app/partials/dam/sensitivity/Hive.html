@@ -37,9 +37,9 @@
 
 							<span ng-show="auth.isRole('ROLE_ADMIN')">
 								<a class="fa fa-eye text-muted hover" ng-click="markSensitivity(db, $event)" ng-show="!db.sensitiveType"
-								tooltip="Mark as sensitivity data" tooltip-animation="false" tooltip-placement="right"></a>
+								uib-tooltip="Mark as sensitivity data" tooltip-animation="false" tooltip-placement="right"></a>
 								<a class="fa fa-eye-slash text-muted hover" ng-click="unmarkSensitivity(db, $event)" ng-show="db.sensitiveType"
-								tooltip="Remove the sensitivity mark" tooltip-animation="false" tooltip-placement="right"></a>
+								uib-tooltip="Remove the sensitivity mark" tooltip-animation="false" tooltip-placement="right"></a>
 							</span>
 
 							<span class="pull-right" ng-show="db.childSensitiveTypes.length">
@@ -63,13 +63,13 @@
 
 									<span ng-show="auth.isRole('ROLE_ADMIN')">
 										<a class="fa fa-eye text-muted hover" ng-click="markSensitivity(tb, $event)" ng-show="!tb.sensitiveType"
-										tooltip="Mark as sensitivity data" tooltip-animation="false" tooltip-placement="right"></a>
+										uib-tooltip="Mark as sensitivity data" tooltip-animation="false" tooltip-placement="right"></a>
 										<a class="fa fa-eye-slash text-muted hover" ng-click="unmarkSensitivity(tb, $event)" ng-show="tb.sensitiveType"
-										tooltip="Remove the sensitivity mark" tooltip-animation="false" tooltip-placement="right"></a>
+										uib-tooltip="Remove the sensitivity mark" tooltip-animation="false" tooltip-placement="right"></a>
 									</span>
 
 									<span class="pull-right" ng-show="tb.childSensitiveTypes.length">
-										<span class="fa fa-dot-circle-o" tooltip="Contain child sensitivity defination"> </span>
+										<span class="fa fa-dot-circle-o" uib-tooltip="Contain child sensitivity defination"> </span>
 									</span>
 									<span ng-show="tb.sensitiveType" class="pull-right">[{{tb.sensitiveType}}]</span>
 								</span>
@@ -100,9 +100,9 @@
 							<td>{{col.sensitiveType}}</td>
 							<td ng-show="auth.isRole('ROLE_ADMIN')">
 								<button class="fa fa-eye btn btn-primary btn-xs" ng-click="markSensitivity(col)" ng-show="!col.sensitiveType"
-								tooltip="Mark as sensitivity data" tooltip-animation="false" tooltip-placement="left"> </button>
+								uib-tooltip="Mark as sensitivity data" tooltip-animation="false" tooltip-placement="left"> </button>
 								<button class="fa fa-eye-slash btn btn-warning btn-xs" ng-click="unmarkSensitivity(col)" ng-show="col.sensitiveType"
-								tooltip="Remove the sensitivity mark" tooltip-animation="false" tooltip-placement="left"> </button>
+								uib-tooltip="Remove the sensitivity mark" tooltip-animation="false" tooltip-placement="left"> </button>
 							</td>
 						</tr>
 					</tbody>

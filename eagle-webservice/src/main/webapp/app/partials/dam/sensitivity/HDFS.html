@@ -58,7 +58,7 @@
 					</a>
 
 					<span class="pull-right" ng-show="item.childSensitiveTypes.length">
-						<span class="fa fa-dot-circle-o text-muted" tooltip="Contain child sensitivity defination"> </span>
+						<span class="fa fa-dot-circle-o text-muted" uib-tooltip="Contain child sensitivity defination"> </span>
 					</span>
 				</td>
 				<td>{{item.owner}}</td>
@@ -66,9 +66,9 @@
 				<td>{{item.sensitiveType}}</td>
 				<td ng-show="auth.isRole('ROLE_ADMIN')">
 					<button class="fa fa-eye btn btn-primary btn-xs" ng-click="markSensitivity(item)" ng-show="!item.sensitiveType"
-					tooltip="Mark as sensitivity data" tooltip-animation="false" tooltip-placement="left"> </button>
+					uib-tooltip="Mark as sensitivity data" tooltip-animation="false" tooltip-placement="left"> </button>
 					<button class="fa fa-eye-slash btn btn-warning btn-xs" ng-click="unmarkSensitivity(item)" ng-show="item.sensitiveType"
-					tooltip="Remove the sensitivity mark" tooltip-animation="false" tooltip-placement="left"> </button>
+					uib-tooltip="Remove the sensitivity mark" tooltip-animation="false" tooltip-placement="left"> </button>
 				</td>
 			</tr>
 		</tbody>

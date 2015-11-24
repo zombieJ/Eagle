@@ -24,35 +24,23 @@ module.exports = function (grunt) {
 		config: grunt.file.readJSON('grunt.json'),
 
 		clean: {
-			build: ['dist/', 'tmp/'],
+			build: ['ui/', 'tmp/'],
 			tmp: ['tmp/'],
-			dist: ['dist/'],
+			ui: ['ui/'],
 		},
 		concat: {
 			app: {
 				src: [
-					"public/js/app.ui.js",
-					"public/js/components/main.js",
-					"public/js/components/sortTable.js",
-					"public/js/components/tabs.js",
-					"public/js/components/file.js",
-					"public/js/components/charts.js",
-					"public/js/components/charts/bar.js",
-					"public/js/components/charts/line3d.js",
+					'app/public/js/app.js',
+					'app/public/js/app.*.js',
 
-					"public/js/common.js",
-					"public/js/config.js",
+					'app/public/js/common.js',
 
-					"public/js/app.time.js",
-					"public/js/app.js",
-					"public/js/ctrl/damController.js",
-					"public/js/ctrl/policyController.js",
-					"public/js/ctrl/siteController.js",
-					"public/js/ctrl/streamController.js",
-					"public/js/ctrl/alertController.js",
-					"public/js/ctrl/sensitivityController.js",
-					"public/js/ctrl/userProfileController.js",
-					"public/js/ctrl/authController.js",
+					'app/public/js/components/main.js',
+					'app/public/js/components/**.js',
+
+					'app/public/js/ctrl/damController.js',
+					'app/public/js/ctrl/*.js',
 				],
 				dest: 'tmp/public/js/scripts.js'
 			},
@@ -82,7 +70,7 @@ module.exports = function (grunt) {
 			},
 		},
 		uglify: {
-			dist: {
+			ui: {
 				options: {
 					mangle: false
 				},
@@ -91,25 +79,25 @@ module.exports = function (grunt) {
 			}
 		},
 		cssmin: {
-			dist: {
+			ui: {
 				files: {
-					'tmp/public/css/styles.css': ['public/css/main.css']
+					'tmp/public/css/styles.css': ['app/public/css/main.css']
 				}
 			}
 		},
 		htmlrefs: {
-			dist: {
-				src: 'index.html',
+			ui: {
+				src: 'app/index.html',
 				dest: "tmp/index.html",
 			}
 		},
 		copy: {
-			dist: {
+			ui: {
 				files: [
-					{expand: true, cwd: 'tmp/', src: ['**'], dest: 'dist'},
-					{expand: true, src: ['public/images/**', 'partials/**'], dest: 'dist'},
-					{expand: true, cwd: 'node_modules/font-awesome/', src: ['fonts/**'], dest: 'dist/public'},
-					{expand: true, cwd: 'node_modules/bootstrap/', src: ['fonts/**'], dest: 'dist/public'},
+					{expand: true, cwd: 'tmp/', src: ['**'], dest: 'ui'},
+					{expand: true, cwd: 'app/', src: ['public/images/**', 'partials/**'], dest: 'ui'},
+					{expand: true, cwd: 'node_modules/font-awesome/', src: ['fonts/**'], dest: 'ui/public'},
+					{expand: true, cwd: 'node_modules/bootstrap/', src: ['fonts/**'], dest: 'ui/public'},
 				]
 			}
 		}

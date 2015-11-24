@@ -100,7 +100,7 @@ eagleComponents.directive('sorttable', function($compile) {
 							'show {{(pageNumber - 1) * pageSize + 1}} to {{pageNumber * pageSize}} of {{filteredList.length}} items' +
 						'</div>' +
 						'<div class="col-xs-7 text-right">' +
-							'<pagination total-items="filteredList.length" ng-model="pageNumber" boundary-links="true" items-per-page="pageSize" num-pages="numPages" max-size="maxSize"></pagination>' +
+							'<uib-pagination total-items="filteredList.length" ng-model="pageNumber" boundary-links="true" items-per-page="pageSize" num-pages="numPages" max-size="maxSize"></uib-pagination>' +
 						'</div>' +
 					'</div>' +
 				'</div>'
