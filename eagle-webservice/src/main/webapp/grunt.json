@@ -26,41 +26,21 @@
 				"public/assets/flot/jquery.flot.legend.js",
 				"node_modules/d3/d3.min.js",
 
-				"public/js/app.ui.js",
-				"public/js/components/main.js",
-				"public/js/components/sortTable.js",
-				"public/js/components/tabs.js",
-				"public/js/components/file.js",
-				"public/js/components/charts.js",
-				"public/js/components/charts/bar.js",
-				"public/js/components/charts/line3d.js",
-
-				"public/js/common.js",
-				"public/js/config.js",
-
-				"public/js/app.time.js",
-				"public/js/app.js",
-				"public/js/ctrl/damController.js",
-				"public/js/ctrl/policyController.js",
-				"public/js/ctrl/siteController.js",
-				"public/js/ctrl/streamController.js",
-				"public/js/ctrl/alertController.js",
-				"public/js/ctrl/sensitivityController.js",
-				"public/js/ctrl/userProfileController.js",
-				"public/js/ctrl/authController.js"
+				"tmp/public/js/scripts.min.js"
 			],
-			"dest": "tmp/public/js/scripts.js"
+			"dest": "tmp/public/js/doc.js"
 		},
 		"css": {
 			"src": [
-				"public/css/main.css",
 				"node_modules/bootstrap/dist/css/bootstrap.min.css",
 				"public/assets/bootstrap-components/css/bootstrap-components.min.css",
 				"node_modules/font-awesome/css/font-awesome.min.css",
 				"node_modules/admin-lte/dist/css/AdminLTE.min.css",
-				"node_modules/admin-lte/dist/css/skins/skin-blue.min.css"
+				"node_modules/admin-lte/dist/css/skins/skin-blue.min.css",
+
+				"tmp/public/css/styles.css"
 			],
-			"dest": "tmp/public/css/styles.css"
+			"dest": "tmp/public/css/styles.min.css"
 		}
 	}
 }
