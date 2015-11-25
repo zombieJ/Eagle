@@ -253,19 +253,33 @@
 				<artifactId>exec-maven-plugin</artifactId>
 				<executions>
 					<execution>
-						<id>exec-npm-install</id>
+						<id>exec-ui-install</id>
 						<phase>generate-sources</phase>
-						<configuration>
-							<executable>npm</executable>
-							<arguments>
-								<argument>install</argument>
-							</arguments>
-						</configuration>
 						<goals>
 							<goal>exec</goal>
 						</goals>
+						<configuration>
+							<executable>bash</executable>
+							<arguments>
+								<argument>${basedir}/ui-build.sh</argument>
+							</arguments>
+						</configuration>
 					</execution>
 				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.6</version>
+				<configuration>
+					<packagingExcludes>
+						app/,
+						node_modules/,
+						grunt.json,
+						Gruntfile.js,
+						package.json
+					</packagingExcludes>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

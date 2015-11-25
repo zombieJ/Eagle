@@ -23,7 +23,7 @@ app.config = {
 	// =                                   URLs                                   =
 	// ============================================================================
 	urls: {
-		HOST: '',
+		HOST: '..',
 
 		updateEntity: 'rest/entities?serviceName=${serviceName}',
 		queryEntity: 'rest/entities/rowkey?serviceName=${serviceName}&value=${encodedRowkey}',
